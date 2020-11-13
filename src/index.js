@@ -16,11 +16,15 @@ const init = async function () {
     const response = await fetch(query);
     const data = await response.json();
     console.log(data);
-    data.results.forEach((breeds) => {
+    data.forEach((breeds) => {
       DOMSelectors.breed.insertAdjacentHTML(
         "beforeend",
 
-        `<p class="breed-list">${breeds.name}</p>`
+        `         
+            <option value="${breeds.name}">${breeds.name}</option>
+ 
+
+        `
       );
     });
   } catch (error) {
