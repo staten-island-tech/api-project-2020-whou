@@ -1,5 +1,6 @@
 const DOMSelectors = {
-  breed: document.querySelector(".breed"),
+  breedName: document.querySelector(".breed-name"),
+
 };
 
 // const DOMSelectors = {

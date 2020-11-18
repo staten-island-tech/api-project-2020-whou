@@ -1,9 +1,3 @@
-//import stuff (DOM)
-//const API key
-//pagination
-//display results
-//init
-
 import { DOMSelectors } from "./DOM";
 
 let regeneratorRuntime = require("regenerator-runtime");
@@ -17,13 +11,10 @@ const init = async function () {
     const data = await response.json();
     console.log(data);
     data.forEach((breeds) => {
-      DOMSelectors.breed.insertAdjacentHTML(
+      DOMSelectors.breedName.insertAdjacentHTML(
         "beforeend",
-
-        `         
-            <option value="${breeds.name}">${breeds.name}</option>
- 
-
+        `   
+        <a class= "breed-border" href="#${breeds.name}">${breeds.name}</a>
         `
       );
     });
@@ -32,4 +23,8 @@ const init = async function () {
   }
 };
 
+
 init();
+
+
+
