@@ -1,6 +1,6 @@
 const DOMSelectors = {
   breedName: document.querySelector(".breed-name"),
-
+  dogInformation: document.querySelector(".dog-information"),
 };
 
 // const DOMSelectors = {

@@ -17,14 +17,16 @@ const init = async function () {
         <a class= "breed-border" href="#${breeds.name}">${breeds.name}</a>
         `
       );
+      DOMSelectors.dogInformation.insertAdjacentHTML(
+        "beforeend",
+        `
+
+      `
+      );
     });
   } catch (error) {
     console.log(error);
   }
 };
 
-
 init();
-
-
-
