@@ -7,6 +7,7 @@ const DOMSelectors = {
   weight: document.querySelector(".weight"),
   height: document.querySelector(".height"),
   temperament: document.querySelector(".temperament"),
+
 };
 
 // const DOMSelectors = {

@@ -14,9 +14,11 @@ const init = async function () {
       DOMSelectors.breedName.insertAdjacentHTML(
         "beforeend",
         `   
-        <a class= "breed-border" href="#${breeds.name}">${breeds.name}</a>
+        <a href=#${breeds.name}>${breeds.name}</a>
         `
       );
+      
+      
     });
     // add event listener to whichever the breed name you click and have it equal to something
     // below have what ever it equals to only to display that data for the things below
@@ -24,36 +26,6 @@ const init = async function () {
     console.log(error);
   }
 };
-
-// DOMSelectors.name.insertAdjacentHTML(
-//   "beforeend",
-//   `<h1>${breeds.name}</h1>
-//    `
-// );
-// DOMSelectors.breedGroup.insertAdjacentHTML(
-//   "beforeend",
-//   `<h1>${breeds.origin}</h1>
-//    `
-// );
-// DOMSelectors.lifeSpan.insertAdjacentHTML(
-//   "beforeend",
-//   `<h1>${breeds.life_span}</h1>
-//    `
-// );
-// DOMSelectors.weight.insertAdjacentHTML(
-//   "beforeend",
-//   `<h1>${breeds.weight}</h1>
-//    `
-// );
-// DOMSelectors.height.insertAdjacentHTML(
-//   "beforeend",
-//   `<h1>${breeds.height}</h1>
-//    `
-// );
-// DOMSelectors.temperament.insertAdjacentHTML(
-//   "beforeend",
-//   `<h1>${breeds.temperament}</h1>
-//    `
-// );
-
 init();
+
+
