@@ -1,12 +1,5 @@
 const DOMSelectors = {
-  breedName: document.querySelector(".breed-name"),
-  dogInformation: document.querySelector(".dog-information"),
-  name: document.querySelector(".name"),
-  breedGroup: document.querySelector(".breed-group"),
-  lifeSpan: document.querySelector(".life-span"),
-  weight: document.querySelector(".weight"),
-  height: document.querySelector(".height"),
-  temperament: document.querySelector(".temperament"),
+  btn: document.querySelector(".btn"),
 
 };
 
