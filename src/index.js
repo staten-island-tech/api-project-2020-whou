@@ -15,7 +15,7 @@ const init = async function () {
         "beforeend",
         `   
         <a id= "myBtn" href=#${breeds.name}>${breeds.name}</a>
-        <div id="myModal" class="modal">
+        <div id="${breeds.id}" class="modal">
         <div class="modal-content">
           <span class="close">&times;</span>
           <p>  
@@ -29,7 +29,7 @@ const init = async function () {
 
         `
       );
-      var modal = document.getElementById("myModal");
+      var modal = document.getElementById(`"${breeds.id}"`);
       var btn = document.getElementById("myBtn");
       var span = document.getElementsByClassName("close")[0];
 
