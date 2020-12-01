@@ -14,9 +14,7 @@ const init = async function () {
       DOMSelectors.breedName.insertAdjacentHTML(
         "beforeend",
         `   
-        <button id="myBtn">
-        <a href=#${breeds.name}>${breeds.name}</a>
-        </button>
+        <a id= "myBtn" href=#${breeds.name}>${breeds.name}</a>
         <div id="myModal" class="modal">
         <div class="modal-content">
           <span class="close">&times;</span>
