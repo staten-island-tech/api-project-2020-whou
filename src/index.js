@@ -15,10 +15,9 @@ const init = async function () {
         "beforeend",
         `   
         <a id= "myBtn" href=#${breeds.name}>${breeds.name}</a>
-        <div id="${breeds.id}" class="modal">
+        <div id="modalbtn" class="modal">
         <div class="modal-content">
-          <span class="close">&times;</span>
-          <p>  
+          <p class="close">&times;
           <h1 class="info-text" class="origin">Origin: ${breeds.origin}</h1>
           <h1 class="info-text" class="breed-group">Breed Group: ${breeds.breed_group}</h1>
           <h1 class="info-text" class="life-span">Life span: ${breeds.life_span}</h1>
@@ -26,10 +25,14 @@ const init = async function () {
           <h1 class="info-text" class="height">Height: ${breeds.height.imperical} inches</h1>
           <h1 class="info-text" class="temperament">Temperament: ${breeds.temperament}</h1>              
           </p>
+        </div>
+        </div>
 
         `
       );
-      var modal = document.getElementById(`"${breeds.id}"`);
+      // var modal = document.getElementById(`"${breeds.id}"`);
+
+      var modal = document.getElementById("modalbtn");
       var btn = document.getElementById("myBtn");
       var span = document.getElementsByClassName("close")[0];
 
@@ -39,11 +42,11 @@ const init = async function () {
       span.onclick = function () {
         modal.style.display = "none";
       };
-      window.onclick = function (event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
-      };
+      // window.onclick = function (event) {
+      //   if (event.target == modal) {
+      //     modal.style.display = "none";
+      //   }
+      // };
     });
   } catch (error) {
     console.log(error);

@@ -3,6 +3,7 @@ body {
   background-color: black;
   height: 95vh;
   font-size: 62.5%;
+  margin-top: 3rem;
 }
 h1 {
   text-align: center;
@@ -73,7 +74,6 @@ h1 {
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-
 }
 
 .dropdown a:hover {
@@ -84,19 +84,10 @@ h1 {
   display: block;
 }
 
-
-
-
-
-
-
 .info-text {
   color: black;
   font-size: 2rem;
 }
-
-
-
 
 .modal {
   display: none; /* Hidden by default */
@@ -135,7 +126,6 @@ h1 {
   text-decoration: none;
   cursor: pointer;
 }
-
 
 #box {
   width: 500px;
