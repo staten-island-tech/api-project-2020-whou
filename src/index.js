@@ -39,6 +39,8 @@ const init = async function () {
       console.log(btn);
       var span = document.getElementsByClassName("close")[breed_num];
 
+      modal.style.display = "none";
+
       btn.onclick = function () {
         modal.style.display = "block";
         console.log("clicked");
