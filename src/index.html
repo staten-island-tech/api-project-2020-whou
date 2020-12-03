@@ -1,5 +1,4 @@
 <html lang="en">
-  
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,25 +9,7 @@
     <link rel="stylesheet" href="style.scss" />
     <title>DOG SEARCH</title>
   </head>
-  <script>
-    function myFunction() {
-      document.getElementById("myDropdown").classList.toggle("show");
-    }
-    function filterFunction() {
-      input = document.getElementById("myInput");
-      filter = input.value.toUpperCase();
-      div = document.getElementById("myDropdown");
-      a = div.getElementsByTagName("a");
-      for (i = 0; i < a.length; i++) {
-        txtValue = a[i].textContent || a[i].innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          a[i].style.display = "";
-        } else {
-          a[i].style.display = "none";
-        }
-      }
-    }
-  </script>
+
   <body>
     <h1>Search for dogs by breed!</h1>
     <div class="breed"></div>
@@ -36,16 +17,16 @@
       <button onclick="myFunction()" class="dropbtn">Pick a Breed</button>
       <div id="myDropdown" class="dropdown-content">
         <input
-        type="text"
-        placeholder="Search.."
-        id="myInput"
-        onkeyup="filterFunction()"
+          type="text"
+          placeholder="Search.."
+          id="myInput"
+          onkeyup="filterFunction()"
         />
         <div class="breed-name"></div>
       </div>
     </div>
 
-  <!-- <script>
+    <script>
       function myFunction() {
         document.getElementById("myDropdown").classList.toggle("show");
       }
@@ -63,10 +44,8 @@
           }
         }
       }
-  </script> -->
+    </script>
 
-  <script src="index.js"></script>
-
+    <script src="index.js"></script>
   </body>
 </html>
-

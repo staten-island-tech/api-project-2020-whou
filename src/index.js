@@ -33,7 +33,6 @@ const init = async function () {
 
         `
       );
-      // var modal = document.getElementById(`"${breeds.id}"`);
 
       var modal = document.getElementsByClassName("modalbtn")[breed_num];
       var btn = document.getElementsByClassName("myBtn")[breed_num];
