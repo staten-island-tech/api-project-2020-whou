@@ -10,7 +10,25 @@
     <link rel="stylesheet" href="style.scss" />
     <title>DOG SEARCH</title>
   </head>
-
+  <script>
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    function filterFunction() {
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      div = document.getElementById("myDropdown");
+      a = div.getElementsByTagName("a");
+      for (i = 0; i < a.length; i++) {
+        txtValue = a[i].textContent || a[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          a[i].style.display = "";
+        } else {
+          a[i].style.display = "none";
+        }
+      }
+    }
+  </script>
   <body>
     <h1>Search for dogs by breed!</h1>
     <div class="breed"></div>
@@ -27,7 +45,7 @@
       </div>
     </div>
 
-  <script>
+  <!-- <script>
       function myFunction() {
         document.getElementById("myDropdown").classList.toggle("show");
       }
@@ -45,7 +63,7 @@
           }
         }
       }
-  </script>
+  </script> -->
 
   <script src="index.js"></script>
 
