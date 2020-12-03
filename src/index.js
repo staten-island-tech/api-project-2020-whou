@@ -10,12 +10,14 @@ const init = async function () {
     const response = await fetch(query);
     const data = await response.json();
     console.log(data);
+    let breed_num = 0;
     data.forEach((breeds) => {
+      console.log(breeds.name);
       DOMSelectors.breedName.insertAdjacentHTML(
         "beforeend",
         `   
-        <a id= "myBtn" href=#${breeds.name}>${breeds.name}</a>
-        <div id="modalbtn" class="modal">
+        <a class= "myBtn" href=#${breeds.name}>${breeds.name}</a>
+        <div class="modalbtn" id="modal" >
         <div class="modal-content">
           <p class="close">&times;
           <h1 class="info-text" class="origin">Origin: ${breeds.origin}</h1>
@@ -32,12 +34,16 @@ const init = async function () {
       );
       // var modal = document.getElementById(`"${breeds.id}"`);
 
-      var modal = document.getElementById("modalbtn");
-      var btn = document.getElementById("myBtn");
-      var span = document.getElementsByClassName("close")[0];
+      var modal = document.getElementsByClassName("modalbtn")[breed_num];
+      var btn = document.getElementsByClassName("myBtn")[breed_num];
+      console.log(btn);
+      var span = document.getElementsByClassName("close")[breed_num];
+
+      modal.style.display = "none";
 
       btn.onclick = function () {
         modal.style.display = "block";
+        console.log("clicked");
       };
       span.onclick = function () {
         modal.style.display = "none";
@@ -47,6 +53,8 @@ const init = async function () {
       //     modal.style.display = "none";
       //   }
       // };
+      breed_num++;
+      console.log(breed_num);
     });
   } catch (error) {
     console.log(error);
