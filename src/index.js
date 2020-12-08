@@ -9,8 +9,8 @@ const init = async function () {
   try {
     const response = await fetch(query);
     const data = await response.json();
-    console.log(data);
     let breed_num = 0;
+
     data.forEach((breeds) => {
       console.log(breeds.name);
       DOMSelectors.breedName.insertAdjacentHTML(
@@ -36,24 +36,24 @@ const init = async function () {
 
       const modal = document.getElementsByClassName("modalbtn")[breed_num];
       const btn = document.getElementsByClassName("myBtn")[breed_num];
-      console.log(btn);
       const span = document.getElementsByClassName("close")[breed_num];
-
-      modal.style.display = "none";
 
       btn.onclick = function () {
         modal.style.display = "block";
-        console.log("clicked");
       };
       span.onclick = function () {
         modal.style.display = "none";
       };
-
       breed_num++;
     });
+    dropDown();
   } catch (error) {
     console.log(error);
   }
+};
+init();
+
+const dropDown = function () {
   DOMSelectors.btn.addEventListener("click", () => {
     document.getElementById("myDropdown").classList.toggle("show");
   });
@@ -62,8 +62,9 @@ const init = async function () {
     const filter = DOMSelectors.input.value.toUpperCase();
     const div = document.getElementById("myDropdown");
     const a = div.getElementsByTagName("a");
+
     for (let i = 0; i < a.length; i++) {
-      const txtValue = a[i].textContent || a[i].innerText;
+      const txtValue = a[i].textContent;
       if (txtValue.toUpperCase().indexOf(filter) > -1) {
         a[i].style.display = "";
       } else {
@@ -72,5 +73,3 @@ const init = async function () {
     }
   });
 };
-
-init();
