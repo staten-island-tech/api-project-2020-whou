@@ -17,20 +17,19 @@ const init = async function () {
         "beforeend",
         `   
         <a class= "myBtn" href=#${breeds.name}>${breeds.name}</a>
-        <div class="modalbtn" id="modal" >
-        <div class="modal-content">
-          <p class="close">&times;
-          <div class= "info-box">
-          <h1 class="info-text" >${breeds.name}</h1>
-          <h1 class="info-text" class="breed-group">Breed Group: ${breeds.breed_group}</h1>
-          <h1 class="info-text" class="life-span">Life span: ${breeds.life_span}</h1>
-          <h1 class="info-text" class="weight">Weight: ${breeds.weight.imperial} pounds</h1>
-          <h1 class="info-text" class="height">Height: ${breeds.height.imperial} inches</h1>
-          <h1 class="info-text" class="temperament">Temperament: ${breeds.temperament}</h1>              
+        <div class="modalbtn" id="modal">
+          <div class="modal-content">
+            <p class="close">&times;
+            <div class= "info-box">
+              <h1 class="info-text">${breeds.name}</h1>
+              <h1 class="info-text" class="breed-group">Breed Group: ${breeds.breed_group}</h1>
+              <h1 class="info-text" class="life-span">Life span: ${breeds.life_span}</h1>
+              <h1 class="info-text" class="weight">Weight: ${breeds.weight.imperial} pounds</h1>
+              <h1 class="info-text" class="height">Height: ${breeds.height.imperial} inches</h1>
+              <h1 class="info-text" class="temperament">Temperament: ${breeds.temperament}</h1>              
+            </div>
           </div>
         </div>
-        </div>
-
         `
       );
 
