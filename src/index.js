@@ -34,10 +34,10 @@ const init = async function () {
         `
       );
 
-      var modal = document.getElementsByClassName("modalbtn")[breed_num];
-      var btn = document.getElementsByClassName("myBtn")[breed_num];
+      const modal = document.getElementsByClassName("modalbtn")[breed_num];
+      const btn = document.getElementsByClassName("myBtn")[breed_num];
       console.log(btn);
-      var span = document.getElementsByClassName("close")[breed_num];
+      const span = document.getElementsByClassName("close")[breed_num];
 
       modal.style.display = "none";
 
@@ -50,7 +50,6 @@ const init = async function () {
       };
 
       breed_num++;
-      console.log(breed_num);
     });
   } catch (error) {
     console.log(error);
