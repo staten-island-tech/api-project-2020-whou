@@ -33,16 +33,7 @@ const init = async function () {
         `
       );
 
-      const modal = document.getElementsByClassName("modalbtn")[breed_num];
-      const btn = document.getElementsByClassName("myBtn")[breed_num];
-      const span = document.getElementsByClassName("close")[breed_num];
-
-      btn.onclick = function () {
-        modal.style.display = "block";
-      };
-      span.onclick = function () {
-        modal.style.display = "none";
-      };
+      popUp(breed_num);
       breed_num++;
     });
     dropDown();
@@ -51,6 +42,19 @@ const init = async function () {
   }
 };
 init();
+
+const popUp = function (b_num) {
+  const modal = document.getElementsByClassName("modalbtn")[b_num];
+  const btn = document.getElementsByClassName("myBtn")[b_num];
+  const span = document.getElementsByClassName("close")[b_num];
+
+  btn.onclick = function () {
+    modal.style.display = "block";
+  };
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+};
 
 const dropDown = function () {
   DOMSelectors.btn.addEventListener("click", () => {
